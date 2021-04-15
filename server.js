@@ -1,0 +1,17 @@
+const bodyParser = require('body-parser')
+const express = require('express')
+const cors = require('cors')
+const mongoose = require('mongoose')
+const app = express()
+const userRoute = require('./route/userRoute')
+const todoRoute = require('./route/todoRoute')
+const port = 5000
+app.use(cors())
+app.use(bodyParser.json())
+mongoose.connect('mongodb+srv://admin:admin@1234@cluster0.sup8i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true })
+    .then(() => { console.log('mogosedb connected') })
+app.use('/auth', userRoute)
+app.use('/api', todoRoute)
+app.listen(port, () => {
+    console.log(`http://localhost:${port}`)
+})

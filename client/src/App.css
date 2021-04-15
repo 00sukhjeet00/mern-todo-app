@@ -1,0 +1,33 @@
+body{
+  background-color: #fcfc;
+}
+span{
+  color: teal;
+}
+.App {
+  text-align: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 30rem;
+}
+.dashboard-container{
+  display: flex;
+  flex-direction: column;
+}
+.todo{
+  display: flex;
+  margin: auto;
+  padding-left: 1rem;  
+  padding-right: 1rem;
+  background-color: rgba(252, 184, 252, 0.8);
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin-top: 1rem;
+}
+.todo:hover{
+  box-shadow: 5px 5px 10px gray;
+}
